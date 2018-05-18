@@ -8,8 +8,11 @@
 @import "global/sprite";
 @import "global/mixins";
 @import "global/button";
+@import "global/icons";
 
 
+@import "sections/title";
 @import "sections/header";
 @import "sections/nav";
-@import "sections/hero"
+@import "sections/hero";
+@import "sections/about";
