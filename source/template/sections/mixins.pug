@@ -1,4 +1,8 @@
-mixin title(header, text)
-  .title.title--with-bottom-line
+mixin title(header, text, line= true)
+  if line
+    -var cl = "title title--with-bottom-line"
+  else
+    -var cl = "title"
+  div(class= cl)
     h2.title.title__header= header
     .title__text= text
