@@ -8,7 +8,7 @@ const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps')
+const sourcemaps = require('gulp-sourcemaps');
 
 /* --------- Server --------*/
 gulp.task('server', function() {
@@ -46,6 +46,8 @@ gulp.task('styles:compile', function () {
 /* -------JS --------- */
 gulp.task('js', function() {
   return gulp.src([
+    'source/js/init.js',
+    'source/js/validation.js',
     'source/js/form.js',
     'source/js/navigation.js',
     'source/js/main.js'
