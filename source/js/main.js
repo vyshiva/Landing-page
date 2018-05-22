@@ -3,6 +3,7 @@
 
   var openFormButton = document.querySelector('.arrow-down');
   var form = document.querySelector('.form');
+  var nav = document.querySelector('.nav');
 
   if (openFormButton){
     openFormButton.addEventListener('click', function(e) {
@@ -19,6 +20,18 @@
       } else {
         console.log('Is not valid');
       }
+    });
+  }
+
+  if (nav) {
+    nav.addEventListener('click', function(e) {
+      var target = e.target;
+      if (target.tagName.toLowerCase() !== 'a'){
+        console.log('Not a');
+        return;
+      }
+      e.preventDefault();
+      main.navigation.toggleToActiveLink(target);
     });
   }
 })();
